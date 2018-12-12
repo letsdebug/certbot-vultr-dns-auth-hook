@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
 import requests
-from requests.auth import HTTPBasicAuth
-from urllib import urlencode
 import sys
 import os
 import string
