@@ -8,7 +8,7 @@ All it requires is that you have your [Vultr API key](https://my.vultr.com/setti
 
 These instructions assume you are on a shell as the `root` user.
 
-1. Make sure you have the requirements `python2` and `python2-requests` installed. Obviously, you should also have `certbot` installed. (Note: On Debian systems the '2' is omitted from python2 package names)
+1. Make sure you have `python` and `python-requests` installed, in addition to Certbot.
 2. Download `vultr-dns.py` somewhere onto your server. In this example, we will use `/etc/letsencrypt/vultr-dns.py` as the location.
 3. `chmod 0700 /etc/letsencrypt/vultr-dns.py && chown root:root /etc/letsencrypt/vultr-dns.py`
 4. Modify the configuration section of `/etc/letsencrypt/vultr-dns.py` :
