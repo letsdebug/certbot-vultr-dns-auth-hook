@@ -10,13 +10,12 @@ VULTR_API_KEY = "put your api key here"
 VULTR_BIND_DELAY = 60
 
 
-def vultr_request(method, path, data=None, json=None):
+def vultr_request(method, path, json=None):
     url = "https://api.vultr.com/v2{}".format(path)
 
     resp = requests.request(
         method,
         url,
-        data=data,
         json=json,
         headers={"Authorization": "Bearer " + VULTR_API_KEY},
     )
@@ -70,7 +69,7 @@ def create_record(domain, txt_value):
         "type": "TXT",
         "data": '"{}"'.format(txt_value),
     }
-    print("/domains/{}/records".format(zone))
+    
     vultr_request("POST", "/domains/{}/records".format(zone), json=create_params)
 
     print(
